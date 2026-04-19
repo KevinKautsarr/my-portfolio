@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { PROJECTS } from '@/constants';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const PortfolioSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -53,11 +54,12 @@ const PortfolioSection = () => {
             className="flex"
           >
             {PROJECTS.map((project) => (
-              <div 
+              <Link 
+                href={`/portfolio/detail/${project.id}?from=home`}
                 key={project.id} 
-                className="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-4"
+                className="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0 px-4 block"
               >
-                <div className="group rounded-3xl border border-slate-100 bg-white overflow-hidden hover:shadow-2xl hover:shadow-slate-200 transition-all duration-500 flex flex-col h-full">
+                <div className="group rounded-3xl border border-slate-100 bg-white overflow-hidden hover:shadow-2xl hover:shadow-slate-200 transition-all duration-500 flex flex-col h-full cursor-pointer">
                   <div className="relative w-full h-48 bg-slate-100 overflow-hidden">
                     {project.image ? (
                       <Image
@@ -86,7 +88,7 @@ const PortfolioSection = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </motion.div>
 

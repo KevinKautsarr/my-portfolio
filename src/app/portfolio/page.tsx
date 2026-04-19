@@ -5,10 +5,11 @@ import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
 import { PROJECTS } from '@/constants';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const PortfolioPage = () => {
   return (
-    <main className="min-h-screen pt-40 pb-20 bg-white">
+    <main className="min-h-screen pt-12 pb-20 bg-white">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -32,9 +33,12 @@ const PortfolioPage = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group relative bg-white rounded-[2.5rem] border border-slate-100 overflow-hidden hover:shadow-2xl hover:shadow-slate-200 transition-all duration-500 flex flex-col"
               >
-                <div className="aspect-[16/10] bg-slate-50 relative overflow-hidden">
+                <Link
+                  href={`/portfolio/detail/${project.id}?from=portfolio`}
+                  className="group relative bg-white rounded-[2.5rem] border border-slate-100 overflow-hidden hover:shadow-2xl hover:shadow-slate-200 transition-all duration-500 flex flex-col h-full block cursor-pointer"
+                >
+                  <div className="aspect-[16/10] bg-slate-50 relative overflow-hidden">
                   {project.image ? (
                     <Image
                       src={project.image}
@@ -69,17 +73,8 @@ const PortfolioPage = () => {
                       ))}
                     </div>
                   </div>
-
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 transition-all hover:translate-y-[-2px] shadow-lg shadow-blue-100"
-                  >
-                    View Project
-                    <ExternalLink size={18} />
-                  </a>
-                </div>
+                    </div>
+                </Link>
               </motion.div>
             ))}
           </div>

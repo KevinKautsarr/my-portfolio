@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Muhammad Kevin Kautsar | Full-stack Developer",
   description:
-    "Portfolio Muhammad Kevin Kautsar - Full-stack Developer berfokus pada Laravel, Next.js, dan AI integration.",
+    "Portfolio of Muhammad Kevin Kautsar — Full-stack Developer specializing in Laravel, Next.js, and AI integration.",
 };
 
 export default function RootLayout({
@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="id"
+      lang="en"
       data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >

@@ -1,7 +1,5 @@
 'use client';
 
-'use client';
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
@@ -10,7 +8,7 @@ import Image from 'next/image';
 
 const ArticlePage = () => {
   return (
-    <main className="min-h-screen pt-32 pb-20 bg-white">
+    <main className="min-h-screen pt-12 pb-20 bg-white">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

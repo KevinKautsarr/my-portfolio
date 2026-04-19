@@ -9,9 +9,9 @@ import { USER_INFO } from '@/constants';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white pt-20 md:pt-0">
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-center min-h-[80vh]">
+    <section className="relative flex items-center justify-center overflow-hidden bg-white py-16 md:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Column: Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -29,17 +29,17 @@ const Hero = () => {
             </div>
 
             <div className="space-y-3">
-              <p className="max-w-xl text-base font-bold text-slate-900 md:text-lg leading-relaxed">
+              <p className="max-w-xl text-base text-gray-600 md:text-lg leading-relaxed">
                 A Web Developer dedicated to crafting high-performance applications that deliver impactful user experiences.
               </p>
-              <p className="text-slate-600 font-medium">
+              <p className="text-gray-600 font-medium">
                 Technology Enthusiast
               </p>
             </div>
 
             <div className="pt-4">
               <Link
-                href="#contact"
+                href="/contact"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:scale-105 transform duration-200"
               >
                 Contact Me

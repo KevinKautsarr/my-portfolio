@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -10,32 +10,20 @@ import { NAV_LINKS } from '@/constants';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <nav
-      className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b',
-        scrolled
-          ? 'bg-white/80 backdrop-blur-md py-3 border-slate-200 shadow-sm'
-          : 'bg-transparent py-5 border-transparent'
-      )}
-    >
+    <nav className="w-full relative z-50 bg-white border-b border-slate-100 py-4">
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link href="/" className="flex items-center flex-shrink-0">
-          <img 
-            src="/logo.png" 
-            alt="Muhammad Kevin Kautsar" 
-            className="h-6 md:h-8 w-auto object-contain object-left" 
+          <Image
+            src="/logo.png"
+            alt="Muhammad Kevin Kautsar"
+            height={32}
+            width={160}
+            className="h-6 md:h-8 w-auto object-contain object-left"
+            style={{ width: 'auto' }}
+            priority
           />
         </Link>
 
@@ -49,8 +37,8 @@ const Navbar = () => {
                 href={link.href}
                 className={cn(
                   'text-sm font-medium transition-all relative py-1',
-                  isActive 
-                    ? 'text-blue-600' 
+                  isActive
+                    ? 'text-blue-600'
                     : 'text-slate-600 hover:text-blue-600'
                 )}
               >
@@ -61,13 +49,13 @@ const Navbar = () => {
               </Link>
             );
           })}
-
         </div>
 
         {/* Mobile Toggle */}
         <button
           className="md:hidden text-slate-900 focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? 'Close menu' : 'Open menu'}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -89,8 +77,8 @@ const Navbar = () => {
                 href={link.href}
                 className={cn(
                   'text-base font-medium transition-colors p-2 rounded-lg',
-                  isActive 
-                    ? 'text-blue-600 bg-blue-50' 
+                  isActive
+                    ? 'text-blue-600 bg-blue-50'
                     : 'text-slate-600 hover:text-blue-600 hover:bg-slate-50'
                 )}
                 onClick={() => setIsOpen(false)}

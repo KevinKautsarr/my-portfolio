@@ -7,12 +7,12 @@ import { ArrowRight } from 'lucide-react';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white selection:bg-blue-100 selection:text-blue-900">
+    <main className="bg-white selection:bg-blue-100 selection:text-blue-900">
       <Hero />
 
-      <section className="relative py-20">
+      <section className="relative py-16 md:py-20">
         <PortfolioSection />
-        <div className="container mx-auto px-6 pb-20 mt-[-40px] flex justify-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center mt-8">
           <Link 
             href="/portfolio" 
             className="group flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors"
@@ -23,9 +23,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative py-20">
+      <section className="relative py-16 md:py-20">
         <ArticleSection />
-        <div className="container mx-auto px-6 pb-20 mt-[-40px] flex justify-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center mt-8">
           <Link 
             href="/article" 
             className="group flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors"
@@ -36,7 +36,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative py-20">
+      <section className="relative py-16 md:py-20">
         <ContactSection />
       </section>
     </main>

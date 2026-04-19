@@ -9,9 +9,9 @@ import Image from 'next/image';
 
 const AboutPage = () => {
   return (
-    <main className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white pt-20 md:pt-0">
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center min-h-[85vh]">
+    <main className="relative bg-white py-16 md:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           
           {/* Left Column: Text Content (Matches Home layout style) */}
           <motion.div

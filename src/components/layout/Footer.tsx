@@ -11,10 +11,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center flex-shrink-0 mb-4">
-              <img 
-                src="/logo.png" 
-                alt="Muhammad Kevin Kautsar" 
-                className="h-6 md:h-8 w-auto object-contain object-left" 
+              <Image
+                src="/logo.png"
+                alt="Muhammad Kevin Kautsar"
+                height={32}
+                width={160}
+                className="h-6 md:h-8 w-auto object-contain object-left"
+                style={{ width: 'auto' }}
               />
             </Link>
             <p className="mt-4 text-slate-600 max-w-sm leading-relaxed">
@@ -54,7 +57,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h3 className="text-sm font-semibold text-slate-900 uppercase tracking-wider mb-4">
-              Navigasi
+              Navigation
             </h3>
             <ul className="space-y-2">
               {NAV_LINKS.map((link) => (
@@ -73,7 +76,7 @@ const Footer = () => {
           {/* Contact Info */}
           <div>
             <h3 className="text-sm font-semibold text-slate-900 uppercase tracking-wider mb-4">
-              Kontak
+              Contact
             </h3>
             <p className="text-sm text-slate-600 mb-2">{USER_INFO.location}</p>
             <a
