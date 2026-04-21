@@ -17,7 +17,7 @@ const Footer = () => {
                 height={32}
                 width={160}
                 className="h-6 md:h-8 w-auto object-contain object-left"
-                style={{ width: 'auto' }}
+                style={{ width: 'auto', height: 'auto' }}
               />
             </Link>
             <p className="mt-4 text-slate-600 max-w-sm leading-relaxed">

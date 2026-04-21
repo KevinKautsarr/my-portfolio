@@ -56,14 +56,15 @@ const Hero = () => {
             className="relative h-auto order-1 lg:order-1 flex items-center justify-center"
           >
             {/* Portrait Image */}
-            <div className="relative w-full h-auto max-w-sm md:max-w-md lg:max-w-lg">
+            <div className="relative w-full h-auto max-w-[280px] md:max-w-[340px] lg:max-w-[400px]">
               <Image
-                src="/profile.png"
+                src="/profile1.png"
                 alt="Muhammad Kevin Kautsar - Web Developer"
                 width={600}
                 height={800}
                 priority
                 className="w-full h-auto object-contain"
+                style={{ height: 'auto' }}
                 quality={95}
               />
             </div>

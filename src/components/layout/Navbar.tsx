@@ -16,15 +16,16 @@ const Navbar = () => {
     <nav className="w-full relative z-50 bg-white border-b border-slate-100 py-4">
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link href="/" className="flex items-center flex-shrink-0">
-          <Image
-            src="/logo.png"
-            alt="Muhammad Kevin Kautsar"
-            height={32}
-            width={160}
-            className="h-6 md:h-8 w-auto object-contain object-left"
-            style={{ width: 'auto' }}
-            priority
-          />
+            <Image
+              src="/logo.png"
+              alt="Muhammad Kevin Kautsar"
+              height={32}
+              width={160}
+              className="h-6 md:h-8 w-auto object-contain object-left"
+              style={{ width: 'auto', height: 'auto' }}
+              priority
+              loading="eager"
+            />
         </Link>
 
         {/* Desktop Menu */}

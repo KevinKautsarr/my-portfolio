@@ -103,14 +103,15 @@ const AboutPage = () => {
             transition={{ duration: 0.8 }}
             className="relative h-auto order-1 lg:order-2 flex items-center justify-center lg:justify-end"
           >
-            <div className="relative w-full h-auto max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
+            <div className="relative w-full h-auto max-w-[280px] md:max-w-[340px] lg:max-w-[400px]">
               <Image
-                src="/profile.png"
+                src="/profile1.png"
                 alt="About Muhammad Kevin Kautsar"
                 width={700}
                 height={900}
                 priority
                 className="w-full h-auto object-contain"
+                style={{ height: 'auto' }}
                 quality={95}
               />
             </div>
